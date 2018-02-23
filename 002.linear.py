@@ -5,7 +5,7 @@ import numpy as np
 x_data = np.random.rand(100).astype(np.float32)
 y_data = x_data * 3 + 4.5
 
-### create tensorflow structure START
+# create tensorflow structure START
 # Weights is a one dimension array, random range from -1 to 1
 Weights = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
 biases = tf.Variable(tf.zeros([1]))
@@ -21,7 +21,7 @@ optimizer = tf.train.GradientDescentOptimizer(0.5)
 train = optimizer.minimize(loss)
 
 init = tf.initialize_all_variables()
-### create tensorflow structure END
+# create tensorflow structure END
 
 sess = tf.Session()
 sess.run(init)
